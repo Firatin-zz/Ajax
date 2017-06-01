@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentHead" runat="Server">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="Scripts/jquery.js"></script>
     <style type="text/css">
         table {
             font-family: arial, sans-serif;
@@ -110,9 +111,9 @@
 
                     var html = "<table border=\"1\"><tr><th>Urun ID</th><th>Urun</th><th>Etiket</th><th>Description</th><th colspan=\"2\">İşlemler</th></tr>";
                     for (var i = 0; i < gelen.length; i++) {
-                        html += "<tr><td><label>" + gelen[i].id + "</label></td><td><label>" + gelen[i].Baslik + "</label></td><td><label>" + gelen[i].Etiket + "</label></td><td><label>" + gelen[i].Description + "</label></td><td><input type=\"button\" itag=\"Edit\" onclick=\"return UrunDuzenle(this);\" value=\"Düzenle\" />";
+                        html += "<tr><td><label>" + gelen[i].id + "</label></td><td><label>" + gelen[i].Baslik + "</label></td><td><label>" + gelen[i].Etiket + "</label></td><td><label>" + gelen[i].Description + "</label></td><td><input class='w3-button w3-teal' type=\"button\" itag=\"Edit\" onclick=\"return UrunDuzenle(this);\" value=\"Düzenle\" />";
                     }
-                    html += "</table>"
+                    html += "</table><br /><br />"
                     $("#veriler").append(html);
                 }
             });
